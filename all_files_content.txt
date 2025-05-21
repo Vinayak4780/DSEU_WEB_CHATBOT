@@ -1,0 +1,1721 @@
+=== File: constants/ACADEMICREGULATIONS.JS  (decoded as utf-8) ===
+const regulations = [
+    {
+        id: "1",
+        name: "Regulation 1 (I)",
+        link: "/regulations/Regulation_1.pdf",
+        desc: "This regulation contains the names of faculties and departments.",
+    },
+    {
+        id: "2A",
+        name: "Regulation 2A",
+        link: "/regulations/Regulation_2A.pdf",
+        desc: "This regulation Covers CBCS, semester system, entry/exit options, and grading as per NEP 2020 at DSEU from 2024–25.",
+    },
+    {
+        id: "3A",
+        name: "Regulation 3A",
+        link: "/regulations/Regulation_3A.pdf",
+        desc: "Regulation for Three Year Diploma (Technical) (NCrF level 4.5) in a Major Discipline.",
+    },
+    {
+        id: "3B",
+        name: "Regulation 3B",
+        link: "/regulations/Regulation_3B.pdf",
+        desc: "This regulation covers three-year (six semesters) and four-year (eight semesters) bachelor's degrees (major and minor) under TSP, VSP, ESP, and ASP, based on Regulation 2-A.",
+    },
+    {
+        id: "3C",
+        name: "Regulation 3C",
+        link: "/regulations/Regulation_3C.pdf",
+        desc: "This covers various skill programs (Technical, Vocational, Entrepreneurship, and Academic) and officially notified master’s programs, including a two-year (four-semester) Master’s in a major discipline, MBA, and one-year MS/MTech. It is based on Regulation 2-A.",
+    },
+];
+
+export { regulations };
+
+=== File: constants/ADMINISTRATION.JS  (decoded as utf-8) ===
+import DG from '../assets/DG.jpg'
+import Registrar from '../assets/Registrar.png'
+
+// advisory board
+import { registarar, VC, neeraj, chairwoman, associate } from '../assets/advisory-board';
+
+const adminButtons = [
+    "Board of Governors",
+    "Finance Committee",
+    "Deans",
+    "Heads",
+    "Presidents",
+    "Wardens",
+    "Assistant Wardens",
+    "JR/DR/AR",
+];
+
+
+const leaders = [
+    {
+        name: "Shri Vinai Kumar Saxena",
+        position: "Hon'ble Chancellor & Lt. Governor",
+        image: DG,
+        email: "Email",
+    },
+    {
+        name: "Prof. Ashok Kumar Nagawat",
+        position: "Vice-Chancellor, DSEU",
+        image: VC,
+        email: "Email",
+    },
+    {
+        name: "Dr. Gagan Dhawan",
+        position: "Registrar, DSEU",
+        image: Registrar,
+        email: "Email",
+    },
+];
+
+
+const sideNavItems = [
+    {
+        id: 1,
+        name: "Board of Management",
+        href: "/administration/administrative/board-of-management",
+        active: false,
+    },
+    {
+        id: 2,
+        name: "Statutory Bodies",
+        href: "/administration/administrative/statutory-bodies",
+        active: false,
+    },
+    {
+        id: 3,
+        name: "Team DSEU",
+        href: "/administration/administrative/team-dseu",
+        active: false,
+    },
+    {
+        id: 9,
+        name: "Statutes, University Act, Ordinances",
+        href: "/administration/administrative/Statutes",
+        active: false,
+    },
+    {
+        id: 4,
+        name: "Statutory Committees",
+        href: "/administration/administrative/advisory-board",
+        active: false,
+    },
+    {
+        id: 5,
+        name: "Employee Policies",
+        href: "/administration/administrative/employee-policy",
+        active: false,
+    },
+    {
+        id: 6,
+        name: "Important Forms",
+        href: "/administration/administrative/important-forms",
+        active: false,
+    },
+    {
+        id: 7,
+        name: "Office Orders",
+        href: '/administration/administrative/office-orders',
+        active: false,
+    },
+    {
+        id: 8,
+        name: "Circulars",
+        href: "/administration/administrative/circulars",
+        active: false,
+    },
+];
+
+
+const admins = [
+    {
+        id: 1,
+        name: "Shri Vinai Kumar Saxena",
+        position: "Hon'ble Chancellor & Lt. Governor",
+        image: DG,
+        description:
+            "Shri Vinai Kumar Saxena serves as the Hon'ble Chancellor & Lt. Governor, contributing to the institution's growth and excellence. With a distinguished career in governance and public service, he plays a vital role in shaping policies that drive academic and infrastructural development at DSEU. His leadership ensures that the university remains committed to skill-based education and industry-aligned programs.",
+    },
+    {
+        id: 2,
+        name: "Prof. Ashok Kumar Nagawat",
+        position: "Vice-Chancellor, DSEU",
+        image: VC,
+        description:
+            "Prof. Ashok Kumar Nagawat leads DSEU as the Vice-Chancellor, fostering academic excellence and innovation. With decades of experience in higher education, he focuses on transforming DSEU into a center of skill-based learning and research. Under his guidance, the university aims to bridge the gap between academia and industry by introducing cutting-edge programs and collaborations with top institutions.",
+    }
+];
+
+const advisoryBoard = [
+    {
+        id: 1,
+        name: "Prof. Ashok Kumar Nagawat",
+        designation: "Vice-Chancellor",
+        src: VC,
+    },
+    {
+        id: 2,
+        name: "Prof. Gagan Dhawan",
+        designation: "Controller of Finance",
+        src: registarar,
+    },
+    {
+        id: 3,
+        name: "Ms. Preeti Reddy",
+        designation: "Chairwoman South Asia, Insights Division, KANTAR",
+        src: chairwoman,
+    },
+    {
+        id: 4,
+        name: "Prof. Rajeev Sharma",
+        designation: "Associate Professor (retd.), Ravi J. Matthai Centre for Educational Innovations",
+        src: associate,
+    },
+    {
+        id: 5,
+        name: "Mr. Neeraj Gulati",
+        designation: null,
+        src: neeraj,
+    },
+];
+
+
+export { leaders, adminButtons, sideNavItems, admins, advisoryBoard };
+
+=== File: constants/ANTIRAGGING.JS  (decoded as utf-8) ===
+const antiRagging = {
+  introText:
+    "The Anti-Ragging Cell ensures a safe and welcoming environment on campus by actively monitoring student interactions, conducting awareness programs, and addressing grievances promptly. We are committed to fostering a culture of mutual respect, inclusivity, and support, where every student can learn and grow without fear or intimidation.",
+    whatIsRagging: [
+      "Ragging refers to any act of physical or psychological abuse directed at a student, often disguised as a form of 'introduction' or 'interaction' by senior students.",
+      "It encompasses behavior that induces embarrassment, fear, or humiliation, including name-calling, coercive tasks, or verbal harassment.",
+      "Ragging may manifest in physical, emotional, or psychological forms and can involve threats, social isolation, or misuse of authority.",
+      "It infringes upon the dignity and rights of students and is recognized as a punishable offense under the law and institutional regulations."
+    ],
+    
+    actionsAgainstRagging: [
+      "Immediate suspension of students found to be involved in ragging, pending the outcome of an investigation.",
+      "A thorough investigation conducted by the Anti-Ragging Cell to identify all individuals responsible and ensure accountability.",
+      "Provision of counseling and psychological support to victims of ragging to aid in their recovery from the trauma.",
+      "Initiation of legal proceedings against offenders, including criminal prosecution in accordance with applicable laws."
+    ],
+    
+  pdfLinks: [
+    {
+      name: "Affidavit by Parent",
+      url: "/Affidavit-by-Parent.pdf"
+    },
+    {
+      name: "Affidavit by Student",
+      url: "/Affidavit-by-Student.pdf"
+    },
+    {
+      name: "UGC Regulations on Ragging",
+      url: "/Anti-Ragging-Rules-UGC.pdf"
+    },
+    {
+      name: "Supreme Court Guidelines",
+      url: "/Honourable-Supreme-Court-of-india-judgement.pdf"
+    }
+  ]
+};
+
+export { antiRagging };
+
+
+=== File: constants/BOARDOFMANAGEMENT.JS  (decoded as utf-8) ===
+import { registarar, VC } from '../assets/advisory-board';
+import { jpSaini, deshmukh, girishKumar, vivekAggrawal, vibhakarShrimali, kamnaSachdeva, shrutiTripathi, dttesecratory, placeholder, njena, principalSecratory } from '../assets/board-of-management/boardOfManagement';
+const boardOfManagement = [
+    {
+        id: 1,
+        name: "Prof. Ashok Kumar Nagawat",
+        designation: "Vice-Chancellor",
+        category: "Chairperson",
+        src: VC,
+    },
+    {
+        id: 2,
+        name: "Mr. Vivek Agarwal",
+        designation: "Member Secretary",
+        category: "Registrar",
+        src: vivekAggrawal,
+    },
+    {
+        id: 3,
+        name: "Prof. Gagan Dhawan",
+        category: "Deans",
+        src: registarar,
+    },
+    {
+        id: 4,
+        name: "Prof. J.P. Saini",
+        designation: "Representative AICTE",
+        category: "Representatives",
+        src: jpSaini,
+    },
+    {
+        id: 5,
+        name: "Prof. S. G. Deshmukh",
+        designation: "Representative UGC",
+        category: "Representatives",
+        src: deshmukh,
+    },
+    {
+        id: 6,
+        name: "Prof. Girish Kumar",
+        category: "Deans",
+        src: girishKumar,
+    },
+    {
+        id: 8,
+        name: "Prof. Kamna Sachdeva",
+        category: "Deans",
+        src: kamnaSachdeva,
+    },
+    {
+        id: 7,
+        name: "Prof. Vibhakar Shrimali",
+        category: "Deans",
+        src: vibhakarShrimali,
+    },
+
+    {
+        id: 10,
+        name: "Prof. N Jena",
+        category: "HoD",
+        src: njena,
+    },
+    {
+        id: 9,
+        name: "Prof. Shruti Tripathi",
+        category: "HoD",
+        src: shrutiTripathi,
+    },
+    {
+        id: 12,
+        name: "Sh. Ashish Chandra Verma, IAS",
+        designation: "Principal Secretary Finance",
+        category: "Secretaries",
+        src: principalSecratory,
+    },
+    {
+        id: 11,
+        name: "Ms. Nandini Paliwal",
+        designation: "Secretary DTTE",
+        category: "Secretaries",
+        src: dttesecratory,
+    }
+];
+
+
+export { boardOfManagement };
+
+=== File: constants/CAMPUSES.JS  (decoded as utf-8) ===
+//? Contains the info/data about each campuses region wise (north, south, east, west)
+
+// east 
+import mayurVihar from "../assets/MayurVihar.jpg";
+import vivekVihar from "../assets/VivekVihar.jpg";
+import bhaiParmanand from "../assets/shakarpur2.jpg";
+
+const east = [
+    {
+        id: 1,
+        img: mayurVihar,
+        name: "DSEU Mayur Vihar Campus",
+        type: "Engineering College",
+        address: "Plot No. 12, Mayur Vihar Phase-1, Delhi-110091",
+        email: "admissions@mvic.edu.in",
+        phone: "+91-11-2278XXXX",
+        website: "www.mvic.edu.in",
+        courses: ["B.Tech", "M.Tech", "BCA", "MCA"],
+        facilities: ["Computer Labs", "Library", "Sports Complex", "Cafeteria"],
+    },
+    {
+        id: 2,
+        img: vivekVihar,
+        name: "DSEU Vivek Vihar Campus",
+        type: "Arts & Humanities College",
+        address: "Vivek Vihar Phase-2, Delhi-110095",
+        email: "info@vvca.edu.in",
+        phone: "+91-11-2356XXXX",
+        website: "www.vvca.edu.in",
+        courses: ["BA", "MA", "BFA", "MFA"],
+        facilities: ["Art Studios", "Auditorium", "Exhibition Hall", "Library"],
+    },
+    {
+        id: 3,
+        img: bhaiParmanand,
+        name: "Bhai Parmanand DSEU Campus",
+        type: "Management Institute",
+        address: "Main Road, Shakarpur, Delhi-110092",
+        email: "admissions@sbs.edu.in",
+        phone: "+91-11-2512XXXX",
+        website: "www.sbs.edu.in",
+        courses: ["BBA", "MBA", "B.Com", "M.Com"],
+        facilities: [
+            "Conference Hall",
+            "Digital Library",
+            "Computer Labs",
+            "Placement Cell",
+        ],
+    },
+];
+
+export { east };
+
+=== File: constants/CHAIRMAN.JS  (decoded as utf-8) ===
+const chancellor = {
+    name: "Chancellor",
+    image: "DG",
+    fullName: "Shri Vinai Kumar Saxena",
+    designation: "LIEUTENANT GOVERNOR",
+    description:
+      "Shri Vinai Kumar Saxena took over as the 22nd Lieutenant Governor of Delhi on 26th May 2022. Shri Saxena comes with over three decades of vast experience in the corporate and social sectors and is the first corporate man ever selected for such gubernatorial post. Prior to his appointment as the LG of Delhi, Shri Saxena served as the Chairman of Khadi & Village Industries Commission (KVIC) from October 2015 to May 2022. At KVIC, Shri Saxena diversified the Khadi and village industry sectors, employed scientific techniques and implemented several innovative projects that brought about a sea change in the lives of the Khadi artisans and strengthened several allied industries.",
+    moreDescription:
+      "Born on 23rd March 1958 in an educated and reputed family of Uttar Pradesh, Shri Saxena graduated from Kanpur University in 1981 and holds a Pilot Licence. His leadership abilities on a diverse range of social and corporate matters fusioned with technical, legal, social and cultural skills make him a philanthropist in vision and corporate scientist in action. With his business leadership on a diverse range of corporate matters such as industries, MSMEs, petroleum and ports - fusioned with technical, legal, social and cultural skills, Shri Saxena has always led from the front in every issue related to social development like water resource development, fighting the social malpractices, disaster management support or clean development of the city space. Shri Saxena started his career as an Assistant Officer in Rajasthan with JK Group and having worked for 11 years in different capacities with its White Cement plant, he was elevated in 1995 as General Manager to look after the proposed Port Project in Gujarat. He then rapidly rose to become the CEO and later elevated as Director of the Dholera Port Project. In October 2015, Shri Saxena was appointed as the Chairman of KVIC not only explored the untapped streams of Khadi and Village Industries, but also implemented many innovative schemes like 'Honey Mission', 'Kumhar Sashaktikaran Yojana' and ‘Leather Artisans’ Empowerment Scheme’ – that brought about a sea change in the lives of the poor and the marginalized. Shri Saxena was instrumental in the innovation of Plastic-mixed Handmade Paper, Khadi Anti-Bacterial Fabric and Khadi Prakritik Paint – India’s first wall paint made of cow dung – for which he got patent certification. Compared to the year 2015-16, when Shri Saxena took the reins of KVIC and through the next six-and-half years, he steered Khadi from neglect to global fame and made it the most recognizable and acceptable Indian brand worldwide. Under Shri Saxena’s leadership, KVIC’s turnover registered a massive growth of 248% while a whopping 43 lakh new employment were created in less than 7 years. It was during the tenure of Shri Saxena, that KVIC, for the first time, clocked a historic turnover of Rs 1.15 lakh crore in 2021-22, the highest by KVIC and by any FMCG company in India so far. Shri Saxena successfully ensured the distribution of 55,000 New Model Charkhas and 11,000 modern looms, which is a record itself in the history of Khadi Commission.",
+  };
+  
+  export default chancellor;
+  
+
+=== File: constants/EOC.JS  (decoded as utf-8) ===
+export const eocData = {
+  description:
+    "The Equal Opportunity Cell (EOC) at Delhi Skill and Entrepreneurship University (DSEU) is dedicated to ensuring that every individual—irrespective of background, identity, or socio-economic status—has equitable access to opportunities, resources, and services. The EOC is committed to fostering a campus environment grounded in inclusivity, equity, and dignity for all members of the University community.",
+
+  objectives: [
+    "Promote equality and inclusion across the university.",
+    "Prevent and address all forms of discrimination.",
+    "Organize awareness and sensitization programs.",
+    "Provide support systems for marginalized groups.",
+    "Facilitate scholarships and financial aid.",
+    "Coordinate with relevant internal and external bodies.",
+    "Monitor policies and report on progress."
+  ],
+  commitment:
+    "The Equal Opportunity Cell is dedicated to empowering all students and fostering a safe, fair, and supportive academic environment. By addressing structural barriers and promoting diverse participation, the EOC plays a vital role in advancing a more just and equitable society within the University.",
+
+    members: [
+    {
+      name: "Prof(Dr.) Arindam Kumar Chanda",
+      role: "Director – EOC"
+    },
+    {
+      name: "Prof(Dr.) Narender Jena",
+      role: "Member"
+    },
+    {
+      name: "Liaison Officer, DSEU",
+      role: "Member"
+    },
+    {
+      name: "Chairperson, ICC",
+      role: "Member"
+    },
+    {
+      name: "Coordinator, IQAC",
+      role: "Member"
+    },
+    {
+      name: "Ms. Sangeeta Jain",
+      role: "Member"
+    },
+    {
+      name: "Mr. Dhruv Kumar Yadav",
+      role: "Member"
+    },
+    {
+      name: "Ms. Parvathy Unnikrishnan",
+      role: "Member Secretary"
+    }
+  ]
+};
+
+
+=== File: constants/FACULTYPROFILEDATA.JS  (decoded as utf-8) ===
+export const profileData = {
+  "/BPIBS": {
+    name: "Prof. Girish Kumar",
+    designation: "Professor in Computer Applications (MCA)",
+    education: [
+      "Ph.D.( Applications of Graph Theory and Queueing Models in Distributed Operating System Architecture) awarded in 2005.",
+      "MCA from Gurukul Kangri Vishwavidyalaya in 1996.",
+      "M.Sc.( Physics ) from Gurukul Kangri Vishwavidyalaya in 1993.",
+
+    ],
+  },
+  "/vivekvihar": {
+    name: "Prof. Vivek Kumar",
+    designation: "Associate Professor in Computer Science",
+    education: [
+      "Ph.D. in Computer Science and Engineering.",
+      "M.Tech. from IIT Delhi.",
+      "B.Tech. in Computer Science from DCE."
+    ],
+  },
+  "/Mayurvihar": {
+    name: "Prof. Ankit Agarwal",
+    designation: "Assistant Professor in Information Technology",
+    education: [
+      "Ph.D. in Information Security.",
+      "M.Tech. in Computer Science from BITS Pilani.",
+      "B.Tech. in Information Technology from IGDTUW."
+    ],
+  },
+  "/shakarpur2": {
+    name: "Prof. Priya Gupta",
+    designation: "Assistant Professor in Data Science",
+    education: [
+      "Ph.D. in Data Science and Machine Learning.",
+      "M.Sc. in Data Analytics from JNU.",
+      "B.Sc. in Computer Science from DU."
+    ],
+  },
+};
+
+=== File: constants/ICC.JS  (decoded as utf-8) ===
+export const iccData = {
+  description: 
+  "Delhi Skill and Entrepreneurship University (DSEU) is a coeducational institution dedicated to ensuring equal opportunities for all individuals. The University promotes a professional and respectful environment where men and women collaborate in harmony. The Internal Complaints Committee (ICC) is committed to raising awareness among students and staff, and to fostering a campus culture that actively prevents sexual harassment. All incidents of sexual harassment must be reported to the Committee, which undertakes appropriate disciplinary measures in accordance with the University's established rules and regulations.",
+
+    objectives: [
+      "Establish an environment in which women staff feel safe and supported to voice concerns without fear of retaliation.",
+      "Cultivate a culture that does not tolerate harassment or discrimination in any form.",
+      "Empower individuals to report inappropriate behavior with confidence and assurance of protection.",
+      "Advance gender equality by addressing systemic challenges faced by women in academia.",
+      "Eliminate gender bias and ensure equitable access to resources and opportunities.",
+      "Promote the professional growth and advancement of women staff members.",
+      "Ensure fairness and transparency throughout all complaint investigation processes.",
+      "Provide comprehensive guidelines and conduct impartial, objective investigations.",
+      "Treat all individuals involved in the process with respect, dignity, and sensitivity."
+    ],
+
+  members: [
+    {
+      name: "Prof(Dr.) Kamna Sachdeva",
+      role: "Presiding Officer"
+    },
+    {
+      name: "Ms. Mansi Gupta",
+      role: "External Member"
+    },
+    {
+      name: "Dr. Ashima Sharma",
+      role: "Member"
+    },
+    {
+      name: "Ms. Preeti Vajpeyi",
+      role: "Member"
+    },
+    {
+      name: "Ms. Parvathy Unnikrishnan",
+      role: "Member"
+    },
+    {
+      name: "Ms. Priya",
+      role: "Member"
+    },
+    {
+      name: "Mr. Nitesh Kumar",
+      role: "Member"
+    },
+    {
+      name: "Mr. Yudhveer Kumar Verma",
+      role: "Member"
+    },
+    {
+      name: "Mr. Nimit Kalra",
+      role: "Member"
+    }
+  ]
+}
+
+=== File: constants/INTRODUCTION.JS  (decoded as utf-8) ===
+const aboutTheUniversity = {
+    info1: [
+        "The Delhi Skill and Entrepreneurship University (DSEU) was established in August 2020 by the Government of NCT of Delhi to provide students with world-class skill education, enabling access to aspirational careers, fostering an entrepreneurial mindset, and promoting entrepreneurship. DSEU strives to create a win-win situation for both the youth and industry by addressing existing gaps in skill training.",
+        "Drawing inspiration from the educational philosophies of thinkers like Mahatma Gandhi and Vinoba Bhave, DSEU seeks to integrate the hand, head, and heart for a balanced life and lifelong learning. The University emphasizes teaching both self-reliance for lifelong independence and the wisdom to nurture and value interdependence."
+    ],
+
+    objectives: [
+        "To transform the current paradigm of skilling, making skill acquisition aspirational, and providing opportunities for skilling, up-skilling, and re-skilling for all.",
+        "To support and nurture entrepreneurs and entrepreneurship."
+    ],
+
+    info2: [
+        "The University offers courses to individuals from all walks of life, empowering marginalized and minority groups by providing access to world-class education. DSEU aims to develop aware, responsible, and well-rounded citizens.",
+        "The course curriculum at DSEU is aligned with industry needs, preparing graduates to be career-ready. The University focuses on holistic development at affordable costs, ensuring that no student is denied admission due to financial constraints. DSEU also offers scholarships, freeships, financial assistance, and support through Delhi government schemes to help students pursue higher education."
+    ]
+}
+
+export { aboutTheUniversity };
+
+
+=== File: constants/JOBPORTAL.JS  (decoded as utf-8) ===
+const jobPortalTabs = [
+    {
+        id: "academic positions",
+        label: "Academic Positions",
+        empty: "No academic positions found.",
+    },
+    {
+        id: "non academic positions",
+        label: "Non Academic Positions",
+        empty: "No non-academic positions found.",
+    },
+    {
+        id: "short term positions",
+        label: "Short-Term Positions",
+        empty: "No short-term positions found.",
+    },
+    {
+        id: "results",
+        label: "Results",
+        empty: "No results found.",
+    },
+    {
+        id: "recruitments and notice",
+        label: "Notice",
+        empty: "No recruitments or notices found.",
+    },
+];
+
+
+const jobPortalData = {
+    academic: [
+        {
+            id: 2,
+            title: "Advertisement For Engagement Of Emeritus Professor",
+            notification: "/job_portal/Advt-Emeritus_Professor_.pdf",
+            startDate: "15/03/2024",
+            apply: "mailto:eprof@dseu.ac.in",
+            lastDate: "30/04/2024",
+            hasPdf: true,
+        },
+        {
+            id: 3,
+            title: "Advertisement For The Post Of Distinguished Professor",
+            notification: "/job_portal/Advt-Distinguished_Professor_.pdf",
+            startDate: "15/03/2024",
+            lastDate: "30/04/2024",
+            apply: "mailto:eprof@dseu.ac.in",
+            hasPdf: true,
+        },
+        {
+            id: 4,
+            title:
+                "Advertisement For Engagement Of Professor of Practice/Associate Professor of Practice/Assistant Professor of Practice",
+            notification: "/job_portal/Advt-POP_.pdf",
+            startDate: "15/03/2024",
+            lastDate: "30/04/2024",
+            apply: "mailto:eprof@dseu.ac.in",
+            hasPdf: true,
+        },
+        {
+            id: 5,
+            title: "Advertisement For Teaching Posts on Deputation",
+            notification: "/job_portal/Advt-Teaching_Deputation_ pdf.pdf",
+            startDate: "15/03/2024",
+            lastDate: "30/04/2024",
+            apply: "/job_portal/Application_Form-Teaching_Deputation.pdf",
+            hasPdf: true,
+        },
+    ],
+    nonAcademic: [
+        {
+            id: 6,
+            title: "Advertisement For Non-Teaching Posts. Advt.",
+            notification: "/job_portal/Advt.01-2025.pdf",
+            startDate: "---",
+            lastDate: "---",
+            apply: "https://dseunt.samarth.edu.in/index.php/site/login",
+            hasPdf: true,
+        },
+        {
+            id: 1,
+            title: "Advertisement For Engagement Of Non-Teaching on Deputation",
+            notification: "/job_portal/Advt-Non_Teaching.pdf",
+            startDate: "15/03/2024",
+            lastDate: "30/04/2024",
+            hasPdf: true,
+        },
+    ],
+    shortTerm: [
+        {
+            id: 1,
+            title:
+                "Notice for Internship program for students to gain practical work experience under qualified mentors.",
+            notification: "/job_portal/Dseu_Internship.pdf",
+            startDate: "---",
+            lastDate: "---",
+            apply: "https://forms.gle/ZdYZBcYKCNkDM6aM7",
+            hasPdf: true,
+        },
+    ],
+    results: [],
+    notice: [],
+};
+
+
+
+
+=== File: constants/PLACEMENT.JS  (decoded as utf-8) ===
+import { abb, concentrix, daikin, hero, infosys, marutisuzuki, nokia, pl1, pl2, pl3, pl4, pl5, samsung, thoughtswork, acres, decathlon, fluor, indigo, max, shneider, sony, tata, JLL, oracle,tcs, bluestar } from "../assets/placement";
+
+const invitationData = {
+    id: "invitation",
+    name: "Invitation",
+    content: [
+        "Delhi Skill and Entrepreneurship University (DSEU) offers a diverse range of programs, including Bachelor of Technology (B.Tech) degrees in Mechanical Engineering, Computer Engineering, Mechatronics Engineering, and Electronics Engineering. Additionally, DSEU provides diploma programs in Computer Engineering, Mechanical Engineering, Chemical Engineering, Tool and Die, Electronics Engineering, and Production Engineering. The university also features Bachelor of Business Administration (BBA) programs across various specializations, as well as Bachelor of Computer Applications (BCA) and Master of Computer Applications (MCA) courses.",
+        "DSEU students have consistently been recruited by leading international conglomerates and Indian corporations, proving to be valuable assets to their respective organizations. We are confident that our current students will maintain this high standard of performance and contribute significantly to the success of their employers.",
+        "We deeply appreciate our partnerships with recruiters, alumni, and supporters of Delhi Skill and Entrepreneurship University and are dedicated to providing a productive and positive recruitment experience. We cordially invite recruiting organizations to connect with us and recruit our talented students."
+    ]
+}
+
+const contacts = [
+    {
+        name: "Delhi Skill and Entrepreneurship University",
+        email: "placements@dseu.ac.in"
+    },
+    {
+        name: "Dr. Ravinder Jhorar, TPO HQ",
+        contact: "9166584808",
+        email: "ravinder.jhorar@dseu.ac.in"
+    },
+    {
+        name: "Mr. Ahmad Omair, TPO, East Zone",
+        contact: "8882513909",
+        email: "ahmad.omair@dseu.ac.in"
+    },
+    {
+        name: "Niharika Pandey, TPO, West Zone",
+        contact: "6393817508",
+        email: "niharika.pandey@dseu.ac.in"
+    },
+    {
+        name: "Mr. Kaushlender Verma, TPO, North Zone",
+        contact: "8076318138",
+        email: "kaushalender.varma@dseu.ac.in"
+    },
+    {
+        name: "Mr. Agrim Tomar, TPO, South Zone",
+        contact: "9368611379",
+        email: "agrim.tomar@dseu.ac.in"
+    }
+];
+
+const placementStats = [
+    { title: "Company Visits", value: "200+", color: "text-blue-800" },
+    { title: "Placement Offers", value: "2300+", color: "text-orange-500" },
+    { title: "Highest Internship Stipend", value: "80K", color: "text-yellow-500" },
+    { title: "Highest UG Package Offered", value: "9 LPA", color: "text-red-500" },
+    { title: "Highest PG Package Offered", value: "11.5 LPA", color: "text-green-600" },
+    // { title: "No. of Offers Rolled", value: "2000+", color: "text-blue-400" },
+    { title: "No. of Companies Participated", value: "165+", color: "text-gray-500" }
+];
+
+const Diploma = [
+    {
+        id: "hero",
+        src: hero,
+        data: "23 students selected"
+    },
+    {
+        id: "marutisuzuki",
+        src: marutisuzuki,
+        data: "137 students selected"
+    },
+    {
+        id: "thoughtswork",
+        src: thoughtswork,
+        data: "28 students selected"
+    },
+    {
+        id: "nokia",
+        src: nokia,
+        data: "13 students selected"
+    },
+    {
+        id: "samsung",
+        src: samsung,
+        data: "23 students selected "
+    },
+    {
+        id: "daikin",
+        src: daikin,
+        data: "6 students selected"
+    },
+    {
+        id: "abb",
+        src: abb,
+        data: "4 students selected"
+    },
+    {
+        id: "infosys",
+        src: infosys,
+        data: "5 students selected "
+    },
+    {
+        id: "concentrix",
+        src: concentrix,
+        data: "19 students selected"
+    },
+    {
+        id: "acres",
+        src: acres,
+        data: "20 students selected"
+    },
+    {
+        id: "decathlon",
+        src: decathlon,
+        data: "3 students selected "
+    },
+    {
+        id: "fluor",
+        src: fluor,
+        data: "13 students selected "
+    },
+    {
+        id: "tata",
+        src: tata,
+        data: "44 students selected "
+    },
+    {
+        id: "indigo",
+        src: indigo,
+        data: "64 students selected"
+    },
+    {
+        id: "max",
+        src: max,
+        data: "5 students selected "
+    },
+    {
+        id: "shneider",
+        src: shneider,
+        data: "5 students selected"
+    },
+    {
+        id: "sony",
+        src: sony,
+        data: "32 students selected"
+    }
+
+]
+
+const UG = [
+    {
+        id: "oracle",
+        src: oracle,
+        data: "2 students selected"
+    },
+    {
+        id: "JLL",
+        src: JLL,
+        data: "6 students selected"
+    },
+    {
+        id: "daikin",
+        src: daikin,
+        data: "3 students selected"
+    },
+    {
+        id: "tcs",
+        src: tcs,
+        data: "27 students selected"
+    },
+    {
+        id: "infosys",
+        src: infosys,
+        data: "14 students selected"
+    },
+    {
+        id: "marutisuzuki",
+        src: marutisuzuki,
+        data: "3 students selected"
+    },
+    {
+        id: "bluestar",
+        src: bluestar,
+        data: "11 students selected"
+    },
+
+
+]
+
+const placementImages = [
+    { id: "pl1", src: pl1 },
+    { id: "pl2", src: pl2 },
+    { id: "pl3", src: pl3 },
+    { id: "pl4", src: pl4 },
+    { id: "pl5", src: pl5 },
+];
+
+export { invitationData, contacts, placementStats, Diploma, placementImages, UG };
+
+=== File: constants/POLICY.JS  (decoded as utf-8) ===
+// AcademicGuildlines
+const academicPolicy = [
+    "The academic policy at Delhi Skill and Entrepreneurship University (DSEU) is designed to provide high-quality education that encourages innovation, skills development, and entrepreneurship. It aims to create a learning environment that prepares students for dynamic and challenging career paths in various industries.",
+    "The academic curriculum is designed to offer flexibility while ensuring a strong foundation in essential disciplines. DSEU emphasizes practical learning through industry collaborations, hands-on projects, and internships. Students are encouraged to engage in research, innovation, and real-world problem-solving from the start of their academic journey.",
+    "The university follows a structured academic calendar with semesters that include lectures, practical sessions, and examinations. It fosters a culture of academic excellence while focusing on the holistic development of students through extracurricular activities, skill-based workshops, and entrepreneurial support.",
+    "The university maintains high standards for examination and evaluation, ensuring fair and transparent processes. Academic integrity is of utmost importance, and students are expected to adhere to the university's code of conduct regarding plagiarism, cheating, and ethical behavior in all academic endeavors.",
+];
+
+const academicSupport = [
+    "DSEU offers robust academic support to students, including faculty mentorship, tutoring, and counseling services. The university provides a range of resources such as libraries, online learning platforms, and career services to ensure students' academic and professional success.",
+    "The university's focus on skill development and entrepreneurship equips students with the tools and knowledge necessary to succeed in their careers. The policy also encourages collaboration with industry leaders, providing a practical edge to academic learning.",
+];
+
+
+// AdmissionPolicy
+const admissionPolicy = [
+    "The Admissions Policy at DSEU is designed to provide a transparent, equitable, and efficient process for students wishing to pursue higher education. The university seeks to attract students from diverse backgrounds and encourages individuals who demonstrate academic excellence, leadership potential, and a passion for personal growth to apply.",
+    "The university offers undergraduate, postgraduate, and diploma programs in a variety of disciplines, including engineering, management, science, and humanities. Each program has its own set of admission criteria based on the eligibility requirements, which are made available to prospective students on the university’s official website.",
+    "DSEU conducts an entrance examination for certain programs, which assesses candidates' academic aptitude and subject-specific knowledge. In addition to the entrance exam, candidates may also be required to provide their academic transcripts, recommendation letters, and personal statements as part of the application process.",
+    "The university follows a merit-based admission system, ensuring that candidates with the highest academic qualifications are given preference. Special consideration is given to underrepresented groups, including students from rural areas, marginalized communities, and economically disadvantaged backgrounds. DSEU strives to maintain a diverse and inclusive student body that reflects the rich cultural fabric of India.",
+    "In addition to merit, the university also offers several scholarships and financial aid programs to support deserving students. These initiatives are designed to ease the financial burden on students and make higher education more accessible to those in need. Scholarships are awarded based on academic performance, financial need, and special achievements.",
+    "Once a candidate is accepted into a program, they are required to complete a registration process, which includes submitting necessary documents, paying tuition fees, and attending an orientation session. This session helps new students familiarize themselves with the university's facilities, policies, and academic expectations, ensuring a smooth transition into university life.",
+    "DSEU maintains a fair and efficient admission process, adhering to strict timelines and ensuring that all applications are processed in a timely manner. The university encourages all candidates to apply early and submit complete application forms to avoid delays in the selection process.",
+    "The university also provides support to international students through a dedicated international office, which assists with visa applications, accommodation arrangements, and cultural integration programs. DSEU is committed to fostering an international community that encourages cross-cultural exchange and global learning opportunities."
+];
+
+
+// AntiRaggingPolicy
+const antiRaggingPolicy = [
+    "The Anti-Ragging Policy at DSEU is a testament to the university's commitment to creating a safe and respectful environment for all students. The university strongly condemns ragging, which includes any form of physical, psychological, or emotional abuse directed toward students. The policy aims to ensure that students can pursue their studies and extracurricular activities without fear or harassment.",
+    "Ragging is considered a criminal offense under Indian law, and DSEU is committed to strictly enforcing this regulation. The university has established a comprehensive approach to prevent ragging, including awareness campaigns, regular workshops, and sensitization programs for both students and staff members. It is mandatory for all incoming students to attend anti-ragging orientation sessions, where they are educated about the legal implications of ragging and the measures in place to combat it.",
+    "To further strengthen this initiative, DSEU has created a dedicated anti-ragging committee that handles complaints and ensures timely resolution of cases. The committee comprises faculty members, administrative staff, and student representatives, ensuring a diverse and balanced perspective when addressing any incident. The university also maintains a zero-tolerance policy towards any form of harassment, and all reported cases of ragging are dealt with swiftly and transparently.",
+    "The university encourages students to report any incidents of ragging, either anonymously or through formal channels, without fear of retaliation. To make this process easier, DSEU has set up a confidential online portal where students can submit complaints. The university also provides counseling services to those affected by ragging, offering them a safe space to discuss their experiences and receive support.",
+    "The Anti-Ragging Policy extends beyond just punishing the offenders. It seeks to create an environment of mutual respect, kindness, and inclusion. The policy promotes the values of empathy and cooperation, encouraging students to build positive relationships with their peers and to help create a community free from discrimination and intimidation.",
+    "DSEU's commitment to eradicating ragging is part of a larger effort to foster a culture of safety, equality, and respect. The university believes that every student, regardless of their background, deserves the opportunity to excel in a nurturing and supportive environment. By taking proactive measures against ragging, DSEU is working to ensure that every student can focus on their academic and personal development without fear of abuse or mistreatment.",
+    "The university will continue to update and refine its Anti-Ragging Policy to stay in line with legal requirements and best practices. DSEU remains committed to fostering a culture of respect, inclusivity, and kindness, and it encourages all members of the community to actively contribute to this goal."
+];
+
+
+// CodeOfConduct
+const codeOfConduct = [
+    "The Code of Conduct at DSEU serves as a foundation for maintaining a respectful, inclusive, and productive academic and social environment for all members of the university community. Every student, faculty member, and staff at DSEU is expected to adhere to these principles in their academic, social, and professional interactions both on and off-campus.",
+    "Respect and integrity are core values that guide behavior within the university. Every individual is expected to treat others with dignity, ensuring that differences in background, beliefs, and opinions are respected. Any form of discrimination, harassment, or bullying is strictly prohibited and will be dealt with according to university policies.",
+    "Students are expected to conduct themselves in a manner that reflects the values of honesty, integrity, and responsibility. Cheating, plagiarism, or any form of academic dishonesty is strictly prohibited. DSEU has a zero-tolerance policy for such behavior, and violators will face appropriate academic and disciplinary actions.",
+    "As members of the university community, students are responsible for maintaining the highest standards of conduct in both academic and non-academic activities. This includes adhering to rules and regulations related to university facilities, services, and events. Students should avoid engaging in activities that might disrupt the peace, safety, and harmony of the campus.",
+    "The university encourages students to participate actively in both academic and extracurricular activities. However, it is important that students strike a balance and avoid any activities that interfere with their academic progress or violate the code of conduct. Participation in clubs, societies, or events must be done responsibly, keeping in mind the values of mutual respect and collaboration.",
+    "DSEU also expects students to maintain a high level of professionalism while interacting with peers, faculty, staff, and external parties. Any behavior that undermines the dignity of the university or its stakeholders is unacceptable. This includes inappropriate use of university resources, such as misusing the internet or damaging university property.",
+    "Students are also expected to respect the confidentiality of personal, academic, and administrative information. The sharing or dissemination of confidential information without permission is a breach of the code of conduct and could result in severe consequences.",
+    "The safety and well-being of students, faculty, and staff are of paramount importance at DSEU. As such, students must adhere to safety regulations and policies. Any actions that jeopardize the safety of individuals or the university’s property will not be tolerated. This includes, but is not limited to, the illegal use of drugs, alcohol, or weapons on campus.",
+    "Any violation of the Code of Conduct will be investigated thoroughly by the university’s disciplinary committee. Students found guilty of misconduct will face appropriate disciplinary action, ranging from counseling and warnings to suspension or expulsion, depending on the severity of the offense. The university will also provide an opportunity for students to present their side of the story in a fair and impartial manner.",
+    "DSEU’s Code of Conduct is designed to ensure a positive and conducive environment for learning and personal growth. By adhering to this code, students contribute to fostering an atmosphere of respect, cooperation, and academic excellence. The university encourages students to hold themselves accountable to these standards and to take an active role in promoting a culture of integrity and respect within the campus community.",
+    "Finally, it is important to note that the Code of Conduct is not only limited to the academic environment but extends to student interactions in all spheres of life, including online platforms and social media. Students are encouraged to engage responsibly and respectfully in online activities, keeping in mind that their actions reflect on the values upheld by DSEU. The university promotes a digital code of conduct that emphasizes respect, integrity, and responsibility in the virtual world."
+];
+
+// Facilitoes
+const facilitiesPolicy = [
+    "DSEU provides state-of-the-art infrastructure and facilities to ensure a high-quality learning experience for students. The university is equipped with modern classrooms, well-equipped laboratories, libraries, and collaborative spaces to support both academic and extracurricular activities.",
+    "The university boasts an extensive library system with a vast collection of books, research journals, and digital resources. Students have access to e-books, online databases, and study areas designed to foster a conducive learning environment.",
+    "DSEU offers advanced computer labs with high-speed internet, the latest software, and necessary tools to support technical education. The labs are open for students to work on projects, research, and skill development.",
+    "The university provides on-campus sports facilities, including courts for basketball, volleyball, and indoor games. Fitness centers and recreational activities are also available to encourage a healthy and active lifestyle among students.",
+    "To ensure students' well-being, DSEU has dedicated health centers offering medical assistance and counseling services. Trained professionals are available to support students’ physical and mental health needs.",
+    "The university has a cafeteria and food courts that offer nutritious and affordable meals, catering to different dietary preferences. Hygiene and quality are maintained to provide students with a comfortable dining experience.",
+    "DSEU provides well-maintained hostel facilities for students requiring accommodation. The hostels are equipped with essential amenities, security measures, and a supportive environment for students living away from home.",
+    "The campus is Wi-Fi enabled, ensuring seamless internet connectivity for students to support their academic needs, online research, and project work.",
+    "DSEU is committed to sustainability and has taken initiatives to create an eco-friendly campus with green spaces, rainwater harvesting, and energy-efficient infrastructure.",
+    "The university facilitates industry collaborations, skill-based training centers, and incubation hubs to provide students with opportunities for innovation, entrepreneurship, and career growth.",
+    "DSEU ensures a safe and secure campus with CCTV surveillance, security personnel, and strict adherence to safety protocols to create a secure environment for students and staff."
+];
+
+
+// SupportServices
+const supportServices = [
+    "DSEU offers a wide range of support services to help students thrive both academically and personally. The university has an active counseling and psychological services team that provides confidential support for students dealing with mental health concerns, personal issues, or academic stress. The counseling services are designed to help students manage their emotional well-being, build resilience, and cope with the pressures of university life.",
+    "In addition to mental health support, DSEU offers academic advising services, where students can seek guidance on course selection, career planning, and academic progress. Advisors help students navigate the university’s academic programs and ensure they meet the necessary requirements to achieve their educational goals. The university's faculty members are also accessible and supportive, providing students with mentorship and advice throughout their academic journey.",
+    "The university’s career services department provides career counseling, job placement assistance, and networking opportunities to help students prepare for life after graduation. Career services offer resume-building workshops, interview preparation, and job fairs, allowing students to connect with potential employers and explore different career paths.",
+    "DSEU's student support services extend beyond academics and career counseling. The university organizes extracurricular activities, clubs, and societies where students can develop their leadership, communication, and teamwork skills. These activities provide students with opportunities to explore new interests, make friends, and contribute to the university community.",
+    "DSEU also has a dedicated alumni network that offers mentoring, career guidance, and networking opportunities to current students. The alumni network is an essential resource for students seeking career advice, internships, or job opportunities in various fields. Alumni contribute to the growth and development of the university by sharing their experiences and expertise with the next generation of students."
+];
+
+
+export { academicPolicy, academicSupport, admissionPolicy, antiRaggingPolicy, codeOfConduct, facilitiesPolicy, supportServices };
+
+=== File: constants/REGISTRARINFO.JS  (decoded as utf-8) ===
+const REGISTRARINFO = {
+    name: "Mr. Vivek Agarwal",
+    designation: "Registrar",
+    university: "Delhi Skill and Entrepreneurship University (DSEU)",
+    profileOverview:
+      "Mr. Vivek Agarwal is a dynamic professional with a multifaceted background in steel manufacturing, civil services, intellectual property, and public administration. A distinguished officer from the Delhi, Andaman and Nicobar Islands Civil Services (DANICS) cadre, Mr. Agarwal brings a wealth of administrative expertise and operational excellence to his role as Registrar at DSEU.\n\nAn alumnus of IIT Kanpur, he holds a B.Tech in Materials and Metallurgical Engineering, combining a strong technical foundation with extensive experience in governance and public systems management.",
+    careerHighlights: [
+      "Formerly associated with Tata Steel, where he oversaw operations and managed the entire manufacturing chain for tubes with a focus on quality assurance.",
+      "Co-founder of an Intellectual Property firm, specializing in patents research, invalidation, prior art searches, and freedom-to-operate analysis.",
+      "Served as Additional District Magistrate, responsible for law and order, land revenue, disaster preparedness, and public welfare schemes in Delhi.",
+      "Held the post of Additional Commissioner of GST, spearheading tax compliance, revenue collection, and administration.",
+      "Played key roles in disaster management, election processes, and initiatives for cultural preservation and heritage vibrancy in Delhi."
+    ],
+    coreStrengths: [
+      "Strategic planning and leadership in governance",
+      "Stakeholder collaboration and public service innovation",
+      "Deep understanding of legal, regulatory, and departmental systems",
+      "Passion for arts, culture, and public engagement"
+    ],
+    message:
+      "I believe in creating systems that empower institutions and people alike. At DSEU, my commitment lies in building robust administrative processes that support our mission of transforming skill education and making a meaningful impact in the lives of students and society."
+  };
+  
+  export {REGISTRARINFO};
+  
+
+=== File: constants/RESEARCHDATA.JS  (decoded as utf-8) ===
+const commiteContent = [
+    {
+        name: "Dr. Michael Chen",
+        role: "Committee Chair",
+        department: "Department of Research Innovation",
+    },
+    {
+        name: "Dr. Emily Williams",
+        role: "Research Ethics Head",
+        department: "Department of Research Methods",
+    },
+    {
+        name: "Dr. Robert Kumar",
+        role: "Research Development Officer",
+        department: "Department of Academic Research",
+    },
+    {
+        name: "Dr. Lisa Thompson",
+        role: "Committee Secretary",
+        department: "Department of Research Planning",
+    },
+    {
+        name: "Dr. Michael Chen",
+        role: "Committee Chair",
+        department: "Department of Research Innovation",
+    },
+    {
+        name: "Dr. Emily Williams",
+        role: "Research Ethics Head",
+        department: "Department of Research Methods",
+    },
+    {
+        name: "Dr. Robert Kumar",
+        role: "Research Development Officer",
+        department: "Department of Academic Research",
+    },
+    {
+        name: "Dr. Lisa Thompson",
+        role: "Committee Secretary",
+        department: "Department of Research Planning",
+    },
+]
+
+const schemeContent = [
+    {
+        title: "Doctoral Fellowship Program",
+        description: "Financial support for full-time doctoral researchers",
+        details: "Covers stipend and research expenses for 3-5 years",
+    },
+    {
+        title: "Research Innovation Grant",
+        description: "Funding for innovative research projects",
+        details: "Available for faculty and senior researchers",
+    },
+    {
+        title: "Young Researcher Award",
+        description: "Support for early-career researchers",
+        details: "Includes mentorship and funding opportunities",
+    },
+    {
+        title: "Postdoctoral Research Fellowship",
+        description:
+            "Fellowship for postdoctoral researchers to continue their studies",
+        details: "Provides funding for up to 2 years of research",
+    },
+    {
+        title: "Industry Collaboration Grant",
+        description: "Encourages partnerships between academia and industry",
+        details:
+            "Funds collaborative research projects with industry partners",
+    },
+    {
+        title: "International Research Exchange Program",
+        description: "Supports researchers in gaining global exposure",
+        details:
+            "Covers travel and accommodation for short-term international exchanges",
+    },
+    {
+        title: "Women in STEM Research Grant",
+        description:
+            "Promotes women researchers in science, technology, engineering, and mathematics",
+        details:
+            "Provides funding and resources for women-led research projects",
+    },
+    {
+        title: "Sustainable Development Research Fund",
+        description:
+            "Supports research focused on sustainability and environmental protection",
+        details:
+            "Available for projects addressing global environmental challenges",
+    },
+    {
+        title: "Innovative Teaching Research Grant",
+        description:
+            "Funds research aimed at improving teaching methodologies",
+        details:
+            "Encourages the development of innovative educational practices",
+    },
+    {
+        title: "Community Impact Research Award",
+        description:
+            "Recognizes research that has a significant positive impact on local communities",
+        details:
+            "Supports projects that address social, economic, or health issues at the community level",
+    },
+]
+
+const scholarsContent = [
+    {
+        name: "John Smith",
+        topic: "Artificial Intelligence Ethics",
+        year: "3rd Year",
+    },
+    {
+        name: "Maria Garcia",
+        topic: "Sustainable Development",
+        year: "2nd Year",
+    },
+    {
+        name: "David Kim",
+        topic: "Quantum Computing",
+        year: "4th Year",
+    },
+    {
+        name: "Sarah Brown",
+        topic: "Climate Change Impact",
+        year: "1st Year",
+    },
+    {
+        name: "Ali Hassan",
+        topic: "Data Privacy",
+        year: "3rd Year",
+    },
+    {
+        name: "Priya Patel",
+        topic: "Machine Learning",
+        year: "2nd Year",
+    },
+    {
+        name: "Emily Carter",
+        topic: "Renewable Energy Solutions",
+        year: "3rd Year",
+    },
+    {
+        name: "Mohammed Khan",
+        topic: "Cybersecurity in IoT",
+        year: "2nd Year",
+    },
+    {
+        name: "Laura Lee",
+        topic: "Blockchain for Supply Chain Management",
+        year: "4th Year",
+    },
+    {
+        name: "James Anderson",
+        topic: "Human-Computer Interaction",
+        year: "1st Year",
+    },
+    {
+        name: "Sophia Martinez",
+        topic: "Neuroscience and AI",
+        year: "3rd Year",
+    },
+    {
+        name: "Chen Wei",
+        topic: "Big Data Analytics",
+        year: "2nd Year",
+    },
+    {
+        name: "Nina Kapoor",
+        topic: "Ethical Hacking Techniques",
+        year: "4th Year",
+    },
+    {
+        name: "Carlos Ruiz",
+        topic: "Bioinformatics",
+        year: "1st Year",
+    },
+    {
+        name: "Hannah Wilson",
+        topic: "Augmented Reality Applications",
+        year: "3rd Year",
+    },
+]
+
+const miscContent = [
+    {
+        title: "Research Guidelines",
+        content: "Comprehensive guide for conducting research",
+    },
+    {
+        title: "Publication Support",
+        content: "Resources for academic publishing",
+    },
+    {
+        title: "Ethics Committee",
+        content: "Research ethics guidelines and procedures",
+    },
+    {
+        title: "Collaboration Opportunities",
+        content: "Information about research partnerships",
+    },
+    {
+        title: "Funding Resources",
+        content: "List of available grants and funding opportunities",
+    },
+    {
+        title: "Data Management Tools",
+        content: "Best practices for data collection and management",
+    },
+    {
+        title: "Workshops and Seminars",
+        content: "Schedule of upcoming research skill development sessions",
+    },
+    {
+        title: "Research Databases",
+        content: "Access to databases and journals for literature reviews",
+    },
+    {
+        title: "Intellectual Property Rights",
+        content: "Guidelines on protecting research innovations",
+    },
+    {
+        title: "Mentorship Programs",
+        content: "Opportunities for guidance from experienced researchers",
+    },
+]
+
+export { commiteContent, schemeContent, scholarsContent, miscContent };
+
+=== File: constants/SCHOLARSHIP.JS  (decoded as utf-8) ===
+export const data = {
+    introduction: [
+        "Delhi Skill and Entrepreneurship University (DSEU) is committed to making quality education accessible to all. To support students from diverse backgrounds, the university facilitates a range of scholarships aimed at promoting academic excellence and reducing financial barriers. These scholarships are made available through government initiatives as well as collaborations with industry partners and philanthropic organizations."
+    ],
+
+    philosophy: [
+        "DSEU aims to ensure that all meritorious students having secured admission in the Universityshall not be denied a seat due to financial constraints. DSEU hosts a number of institutional as wellas external scholarships, which the students can avail based on the eligibility criteria laid down by the University and other funding agencies respectively.The table below summarizes the available scholarships for DSEU students to support their academic journey. The detailed modalities of each of the scholarship opportunities is described in the next section."
+    ],
+
+    table:[
+        {
+            id: 1,
+            name: "Merit-cum-Means linked Financial Assistance Scheme for Pursuing Higher Education in State Universities in Delhi (through e-district portal)"
+          },
+          {
+            id: 2,
+            name: "Merit-cum-Means Scholarship Scheme by DSEU"
+          },
+          {
+            id: 3,
+            name: "Stepping-stone scholarship"
+          },
+          {
+            id: 4,
+            name: "Topper’s scholarship"
+          },
+          {
+            id: 5,
+            name: "Raman Kant Munjal Scholarship 2021 (Selection Partner - iDreamCareer)"
+          },
+          {
+            id: 6,
+            name: "Mahindra All India Talent Scholarship (MAITS) by K.C Mahindra Education Trust"
+          },
+          {
+            id: 7,
+            name: "Surya Kiran Scholarship (By Sun Foundation)"
+          },
+          {
+            id: 8,
+            name: "Data Analytics Scholarship (By The IKIGAI Lab)"
+          },
+          {
+            id: 9,
+            name: "Vidyasaarathi Scholarship"
+          },
+          {
+            id: 10,
+            name: "Buddy4Study Scholarship Portal"
+          },
+          {
+            id: 11,
+            name: "Jai Krishna Scholarship"
+          }
+    ],
+    details: [
+        {
+          content:
+            "For detailed information about available scholarships and eligibility criteria. ",
+          path:
+             "/scholarship/Scholarship_DSEU.docx-2.pdf"
+        }
+]
+
+
+}
+
+=== File: constants/STUDENTEVENTS.JS  (decoded as utf-8) ===
+import activity1 from "/src/assets/Activities/Activities1.jpeg";
+import activity2 from "/src/assets/Activities/Activities2.jpeg";
+import activity3 from "/src/assets/Activities/Activities3.jpeg";
+import activity4 from "/src/assets/Activities/Activities4.jpeg";
+import activity5 from "/src/assets/Activities/Activities5.jpeg";
+import activity6 from "/src/assets/Activities/Activities6.jpeg";
+import activity7 from "/src/assets/Activities/Activities7.jpeg";
+import activity8 from "/src/assets/Activities/Activities8.jpeg";
+import activity9 from "/src/assets/Activities/Activities9.jpg";
+import activity10 from "/src/assets/Activities/Activities10.jpg";
+import activity11 from "/src/assets/Activities/Activities11.jpg";
+import activity12 from "/src/assets/Activities/Activities12.jpg";
+import activity13 from "/src/assets/Activities/Activities13.jpg";
+import activity14 from "/src/assets/Activities/Activities14.jpg";
+import activity15 from "/src/assets/Activities/Activities15.jpg";
+import activity16 from "/src/assets/Activities/Activities16.jpg";
+import activity17 from "/src/assets/Activities/Activities17.jpg";
+import activity18 from "/src/assets/Activities/Activities18.jpg";
+
+import thumbnail1 from "/src/assets/thumbnail/thumbnail1.jpg";
+import thumbnail3 from "/src/assets/thumbnail/thumbnail3.jpg";
+import thumbnail4 from "/src/assets/thumbnail/thumbnail4.jpg";
+import thumbnail5 from "/src/assets/thumbnail/thumbnail5.jpg";
+import thumbnail6 from "/src/assets/thumbnail/thumbnail6.jpg";
+
+export const allImages = [
+  activity1,
+  activity2,
+  activity3,
+  activity4,
+  activity5,
+  activity6,
+  activity7,
+  activity8,
+  activity9,
+  activity10,
+  activity11,
+  activity12,
+  activity13,
+  activity14,
+  activity15,
+  activity16,
+  activity17,
+  activity18,
+];
+
+export const videoData = [
+  {
+    thumbnail: thumbnail1,
+    title: "Valedictory Speech of Hon'ble Vice Chancellor, DSEU",
+    subheading: "",
+    link: "https://www.youtube.com/watch?v=RV42xYACFZM&t=320s",
+  },
+  {
+    thumbnail: thumbnail3,
+    title: "DSEU Chetak Awards",
+    subheading: "",
+    link: "https://www.youtube.com/watch?v=RfnC6ltc9pg",
+  },
+  {
+    thumbnail: thumbnail4,
+    title: "G20 Fashionista organised at DSEU",
+    subheading: "",
+    link: "https://www.youtube.com/watch?v=_2nZ5XGAzgg",
+  },
+  {
+    thumbnail: thumbnail5,
+    title: "DSEU Talks on Women's Welfare to Women Led Development",
+    subheading: "",
+    link: "https://www.youtube.com/watch?v=pXfQx0dD8R0&ab_channel=DSEUTalks",
+  },
+  {
+    thumbnail: thumbnail6,
+    title: "Motivational Talk for Faculty and Students",
+    subheading: "",
+    link: "https://www.youtube.com/watch?v=Zwguntx_v68&ab_channel=DSEUTalks",
+  },
+];
+
+
+
+const carouselItems = [
+    { image: achievement1 },
+    { image: achievement2 },
+    { image: achievement3 },
+    { image: achievement4 },
+    { image: achievement5 },
+];
+
+export { carouselItems, programs };
+
+
+
+const members = [
+  {
+    id: 1,
+    name: "Sh. Vinai Kumar Saxena",
+    src: chancellor,
+    designation: "Hon'ble Chancellor & Lt. Governor",
+    category: "Chancellor",
+  },
+  {
+    id: 2,
+    name: "Prof. Ashok Kumar Nagawat",
+    src: vicechancellor,
+    designation: "Vice-Chancellor",
+    category: "Vice Chancellor",
+  },
+  {
+    id: 3,
+    name: "Mr. Vivek Agarwal",
+    src: vivekAggarwal,
+    designation: "Registrar",
+    category: "Registrar",
+  },
+  {
+    id: 4,
+    name: "Prof. Arindam Kumar Chanda",
+    src: arindamKumarChanda,
+    designation: "Faculty of Mechanical Engineering Skills",
+    category: "Deans",
+  },
+  {
+    id: 5,
+    name: "Prof. Gagan Dhawan",
+    src: gagandhawan,
+    designation: "Faculty of Allied Medical Sciences and Healthcare Skills",
+    category: "Deans",
+  },
+  {
+    id: 6,
+    name: "Prof. Girish Kumar Sharma",
+    src: girishKumar,
+    designation: "Research",
+    category: "Deans",
+  },
+  {
+    id: 7,
+    name: "Prof. Kamna Sachdeva",
+    src: kamnaSachdeva,
+    designation: "Faculty of Converging Science and Technology Skills",
+    category: "Deans",
+  },
+  {
+    id: 8,
+    name: "Prof. Shruti Tripathi",
+    src: shrutiTripathi,
+    designation: "Faculty of Business, Finance and Managerial Skills",
+    category: "Deans",
+  },
+  {
+    id: 9,
+    name: "Prof. Vibhakar Shrimali",
+    src: vibhakarShrimali,
+    designation: "Faculty of Electronics and Electrical Engineering Skills",
+    category: "Deans",
+  },
+  {
+    id: 10,
+    name: "Prof. Arindam Kumar Chanda",
+    src: arindamKumarChanda,
+    designation: "Campus Director - DSEU Okhla Campus",
+    category: "Campus Directors",
+  },
+  {
+    id: 11,
+    name: "Dr. Arun Dabas",
+    src: arunDabas,
+    designation: "Campus Director - DSEU Ranhola Campus",
+    category: "Campus Directors",
+  },
+  {
+    id: 12,
+    name: "Dr. Ghanshyam",
+    src: drGhanshyam,
+    designation: "Campus Director - Ambedkar DSEU Campus",
+    category: "Campus Directors",
+  },
+  {
+    id: 13,
+    name: "Mr. H. R. Meena",
+    src: hrMeena,
+    designation: "Campus Director - Guru Nanak Dev DSEU Campus",
+    category: "Campus Directors",
+  },
+  {
+    id: 14,
+    name: "Dr. Harvinder Kaur",
+    src: harvinderKaur,
+    designation: "Campus Director - Bhai Parmanand DSEU Campus",
+    category: "Campus Directors",
+  },
+  {
+    id: 15,
+    name: "Dr. Monica Chopra",
+    src: monicaChopra,
+    designation: "Campus Director - DSEU Dheerpur Campus",
+    category: "Campus Directors",
+  },
+  {
+    id: 16,
+    name: "Prof. N. Jena",
+    src: dnJena,
+    designation: "Campus Director - DSEU Pusa II Campus",
+    category: "Campus Directors",
+  },
+  {
+    id: 17,
+    name: "Dr. Pankaj Kumar Singh",
+    src: pankarKumarSigh,
+    designation: "Campus Director - DSEU Wazirpur Campus",
+    category: "Campus Directors",
+  },
+  {
+    id: 18,
+    name: "Dr. Pankaj Lathar",
+    src: pankajLathar,
+    designation: "Campus Director - DSEU Dwarka Campus",
+    category: "Campus Directors",
+  },
+
+  {
+    id: 19,
+    name: "Mr. Porusu Ramanaiah",
+    src: porusuRamananiah,
+    designation: "Campus Director - DSEU Jaffarpur Campus",
+    category: "Campus Directors",
+  },
+  {
+    id: 20,
+    name: "Dr. Pramod Kumar Goyal",
+    src: pramodKumarGoyal,
+    designation: "Campus Director - DSEU Pusa I Campus",
+    category: "Campus Directors",
+  },
+  {
+    id: 21,
+    name: "Dr. Punita Duhan",
+    src: punitaDuhan,
+    designation: "Campus Director - DSEU Vivek Vihar Campus",
+    category: "Campus Directors",
+  },
+  {
+    id: 22,
+    name: "Dr. Ranbir Singh Sharma",
+    src: ranbirSinghSharma,
+    designation: "Campus Director - Aryabhatt DSEU Campus",
+    category: "Campus Directors",
+  },
+  {
+    id: 23,
+    name: "Dr. Sampurnananda Mishra",
+    src: sampuranandaMishra,
+    designation: "Campus Director - DSEU Mayur Vihar Campus",
+    category: "Campus Directors",
+  },
+  {
+    id: 24,
+    name: "Ms. Sangeeta Jain",
+    src: sangeetaJain,
+    designation: "Campus Director - DSEU Siri Fort Campus",
+    category: "Campus Directors",
+  },
+  {
+    id: 25,
+    name: "Prof. Shruti Tripathi",
+    src: shrutiTripathi,
+    designation: "Campus Director - Kasturba DSEU Campus",
+    category: "Campus Directors",
+  },
+  {
+    id: 26,
+    name: "Ms. Shubha GV",
+    src: shubhaGV,
+    designation: "Campus Director - Meerabai DSEU Campus",
+    category: "Campus Directors",
+  },
+  {
+    id: 27,
+    name: "Prof. Vibhakar Shrimali",
+    src: vibhakarShrimali,
+    designation: "Campus Director - GB Pant DSEU Campus",
+    category: "Campus Directors",
+  },
+  {
+    id: 34,
+    name: "Mr. Kireet Kant Srivastava",
+    src: kieraatSrivastava,
+    designation: "Executive Engineer (Civil)",
+    category: "Officers",
+  },
+  {
+    id: 28,
+    name: "Mr. Mukesh Kumar Gupta",
+    src: mukeshKumarGupta,
+    designation: "OSD (Legal/RTI)",
+    category: "Officers",
+  },
+  {
+    id: 30,
+    name: "Ms. Parvathy Unnikrishnan",
+    src: parvathyUnnikrishan,
+    designation: "Assistant Registrar",
+    category: "Officers",
+  },
+  {
+    id: 31,
+    name: "Ms. Ritu Sareen",
+    src: rituSareen,
+    designation: "Assistant Registrar (Academics)",
+    category: "Officers",
+  },
+  {
+    id: 33,
+    name: "Dr. Ruchika Singh",
+    src: ruchikaSingh,
+    designation: "Assistant Registrar",
+    category: "Officers",
+  },
+  {
+    id: 29,
+    name: "Mr. Shivam Gupta",
+    src: shivamGupta,
+    designation: "OSD IT and Process Automation & Nodal officer Samarth ERP",
+    category: "Officers",
+  },
+  {
+    id: 32,
+    name: "Dr. Surender Kumar Sharma",
+    src: surrendarKumarSharma,
+    designation: "Assistant Registrar",
+    category: "Officers",
+  },
+  {
+    id: 36,
+    name: "Mr. Shubham Chakraborty",
+    src: shubhamChakraborty,
+    designation: "Assistant Accounts Officer",
+    category: "Accounts Officers",
+  },
+  {
+    id: 35,
+    name: "Mrs. Veena Upadhyay",
+    src: veenaUpadhay,
+    designation: "Senior Accounts Officer",
+    category: "Accounts Officers",
+  },
+  {
+    id: 38,
+    name: "Mr. Ahmad Omair",
+    src: ahmadOmair,
+    category: "Training and Placement Officers",
+  },
+  {
+export { vision, mission, keyPrincipals };
+
+    name: "Mr. Kaushalender Varma",
+    src: kaushalSachdeva,
+    category: "Training and Placement Officers",
+  },
+  {
+    id: 39,
+    name: "Ms. Niharika Pandey",
+    src: niharikaPandey,
+    category: "Training and Placement Officers",
+  },
+  {
+    id: 37,
+    name: "Dr. Ravinder Jhorar",
+    src: ravinderJohar,
+    category: "Training and Placement Officers",
+  }
+];
+
+export { members };
+
+
+=== File: constants/VCINFO.JS  (decoded as utf-8) ===
+const VCINFO = {
+    name: "Prof. (Dr.) Ashok Kumar Nagawat",
+    designation: "Vice Chancellor",
+    university: "Delhi Skill and Entrepreneurship University (DSEU)",
+    profileSummary:
+      "Prof. (Dr.) Ashok Kumar Nagawat is a visionary academic leader and educationist with a distinguished career spanning over four decades. He currently serves as the Vice Chancellor of Delhi Skill and Entrepreneurship University (DSEU), where he is leading the transformation of higher education through skill-based, industry-aligned, and NEP-compliant programs.",
+    previousPositions: [
+      "Former Vice Chancellor, Rajasthan Technical University, Kota",
+      "Adviser, Knowledge Management, at the Department of Science and Technology (DST), Government of India",
+      "Professor at the University of Rajasthan, Jaipur"
+    ],
+    expertiseAreas: [
+      "Higher education policy and reforms",
+      "Skill development and entrepreneurship education",
+      "Science and technology management",
+      "Digital learning ecosystems"
+    ],
+    keyContributions: [
+      "Spearheading the design and execution of NEP-aligned skill-integrated programs at DSEU",
+      "Establishing strong academia-industry linkages for hands-on, employability-driven education",
+      "Advocating interdisciplinary and experiential learning approaches in line with global best practices",
+      "Championing initiatives focused on inclusive education and social mobility"
+    ],
+    academicBackground:
+      "Prof. Nagawat holds a Ph.D. in Physics and has contributed extensively to scientific research, technology outreach, and academic development. His publications and policy papers reflect his commitment to bridging the gap between education and real-world application.",
+    messageToStudents:
+      "Education must empower learners not only with knowledge but with the confidence, skill, and courage to shape a better tomorrow. At DSEU, we are committed to making that vision a reality."
+  };
+  
+  export {VCINFO};
+  
+
+=== File: constants/VISION&MISSION.JS  (decoded as utf-8) ===
+const vision = {
+    id: 1,
+    name: "Vision",
+    content: [
+        "To set the standards for skilling and entrepreneurship education.",
+        "To lead students at DSEU through a journey of personal transformation, empowering them to become agents of change in their communities.",
+        "To become a leading partner in the sustainable growth of the industry and the country.",
+    ],
+};
+
+const mission = {
+    id: 2,
+    name: "Mission",
+    content: [
+        "To accord dignity to all skills by emphasizing their teaching and learning.",
+
+        "To inculcate an entrepreneurial mindset for sustainable growth of the planet, the country, the society, the industry and the individual.",
+
+        "To work in partnership with the industry to nurture talent which is honed to be ready-to-work on the day of graduation.",
+    ]
+};
+
+
+const keyPrincipals = {
+    id: 3,
+    name: "Key Principles",
+    desc: "Delhi Skill and Entrepreneurship University has defined some key principles which are embedded in all its programs to help in the holistic development of all students:",
+    content: [
+        "Develop market-linked programs by customizing them to specific job roles.",
+        "Multiple entry/exit options and offer integrated career pathways.",
+        "Design inclusive programs.",
+        "Ensure holistic development by deeply integrating employability/life skills in the curriculum.",
+        "Leverage technology.",
+        "Equip students with an entrepreneurial mindset."
+    ]
+};
+

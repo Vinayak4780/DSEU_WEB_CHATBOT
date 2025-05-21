@@ -1,0 +1,63 @@
+# Core Python Dependencies
+fastapi
+uvicorn
+pydantic
+
+# LangChain & Embeddings
+langchain==0.3.20
+langchain-community==0.3.19
+langchain-huggingface>=0.0.1
+langchain-text-splitters==0.3.6
+
+
+# LLM
+llama-cpp-python==0.3.8 
+
+# CrewAI
+crewai==0.108.0
+
+
+# Vector Search & Text
+faiss-cpu==1.10.0
+sentence-transformers==3.4.1
+
+accelerate
+numpy
+
+# Image Processing
+pillow
+pytesseract
+
+matplotlib
+opencv-python-headless
+
+# OCR Language Support
+tesseract
+# Note: Tesseract must also be installed on the system (already handled in Dockerfile via `apt-get install`)
+
+# Fuzzy Matching
+fuzzywuzzy
+python-Levenshtein
+thefuzz
+
+# PDF/Text Parsing
+python-docx
+PyMuPDF
+pdfplumber
+
+# Excel Handling
+openpyxl
+pandas
+
+# Logging & Utilities
+loguru
+requests
+tqdm
+nltk==3.8.1
+autocorrect
+
+#monitering
+prometheus-client
+starlette-exporter
+spacy
+textblob

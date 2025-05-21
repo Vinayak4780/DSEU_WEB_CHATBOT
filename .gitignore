@@ -1,0 +1,6 @@
+*.gguf
+*.xlsx
+*.zip
+*__pycache__
+*.docs
+*.db
