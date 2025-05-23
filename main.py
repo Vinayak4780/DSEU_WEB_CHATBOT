@@ -258,68 +258,116 @@
 #!/usr/bin/env python3
 #!/usr/bin/env python3
 import sys
+import multiprocessing as mp
+
+# ─── 1) FORCE 'spawn' FOR CUDA‐SAFE SUBPROCESSING ───────────────────────────
+if __name__ == "__main__":
+    mp.set_start_method("spawn", force=True)
+
+# ─── 2) CORE DEPENDENCIES ────────────────────────────────────────────────────
 import spacy
 from textblob import TextBlob
-from transformers import pipeline
+from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor
+from langchain_community.embeddings import HuggingFaceEmbeddings
+from sklearn.metrics.pairwise import cosine_similarity
+import numpy as np
 
-# Import each agent module (handlers defined there)
-import agents.admission       as admission_module
-import agents.program         as program_module
-import agents.faculties       as faculty_module
-import agents.member          as member_module
-import agents.student         as student_module
-import agents.campus          as campus_module
-import agents.default_agent   as default_module
+# ─── 3) IMPORT YOUR CREWAI AGENTS ────────────────────────────────────────────
+from agents.admission  import admission_agent,admission_task
+from agents.program    import program_agent, program_task
+from agents.faculties  import faculty_agent, faculty_task
+from agents.member     import board_agent, board_task
+from agents.student    import student_agent,    student_task
+from agents.default_agent import default_agent, default_task
+from agents.campus     import campus_agent, campus_task
 
-# Preprocessing: lowercase, spelling correction, punctuation removal
+# ─── 4) PREPROCESSING ───────────────────────────────────────────────────────
 nlp = spacy.load("en_core_web_sm")
 def preprocess_query(text: str) -> str:
     corrected = str(TextBlob(text.lower()).correct())
     doc = nlp(corrected)
-    tokens = [tok.lemma_ for tok in doc if not tok.is_punct and not tok.is_stop]
-    return " ".join(tokens)
+    return " ".join(tok.lemma_ for tok in doc if not tok.is_punct and not tok.is_stop)
 
-# Zero‐shot intent classification
-zero_shot = pipeline(
-    "zero-shot-classification",  
-    model="facebook/bart-large-mnli",
-    device=0  # or -1 for CPU
-)
+# ─── 5) EMBEDDINGS & AGENT PROFILES ─────────────────────────────────────────
+embedder = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 
-# Map intent labels to handler functions
-INTENT_HANDLERS = {
-    "admission": admission_module.main_bot,
-    "program":   program_module.syllabus_bot,
-    "faculties": faculty_module.faculty_bot,
-    "member":    member_module.board_bot,
-    "student":   student_module.student_bot,
-    "campus":    campus_module.syllabus_bot,
+INTENT_AGENTS = {
+    "admission": admission_agent,
+    "program":   program_agent,
+    "faculties": faculty_agent,
+    "member":    board_agent,
+    "student":   student_agent,
+    "campus":    campus_agent,
 }
-INTENT_LABELS = list(INTENT_HANDLERS.keys()) + ["general_fallback"]
-THRESHOLD = 0.4
+INTENT_PROFILES = {
+    label: f"{agent.backstory} {agent.goal}"
+    for label, agent in INTENT_AGENTS.items()
+}
 
+# Precompute embeddings for each agent profile
+INTENT_EMBS = {
+    label: np.array(embedder.embed_documents([profile])[0])
+    for label, profile in INTENT_PROFILES.items()
+}
+
+SIMILARITY_THRESHOLD = 0.3  # tune this as needed
+
+# ─── 6) EMBEDDING‐BASED INTENT CLASSIFICATION ───────────────────────────────
 def classify_intent(query: str) -> str:
-    result = zero_shot(query, INTENT_LABELS)
-    label, score = result["labels"][0], result["scores"][0]
-    return label if score >= THRESHOLD else "general_fallback"
+    q_emb = np.array(embedder.embed_query(query))
+    sims = {
+        label: cosine_similarity(q_emb.reshape(1, -1), emb.reshape(1, -1))[0][0]
+        for label, emb in INTENT_EMBS.items()
+    }
+    best_label, best_score = max(sims.items(), key=lambda kv: kv[1])
+    return best_label if best_score >= SIMILARITY_THRESHOLD else "general_fallback"
 
-# Main handler without TaskManager
+# ─── 7) MAIN HANDLER WITH FALLBACK TO DEFAULT_AGENT ─────────────────────────
+
 def handle_query(user_query: str) -> str:
-    # Preprocess and classify
     clean_q = preprocess_query(user_query)
     intent  = classify_intent(clean_q)
 
-    # Choose corresponding handler or default
-    handler = INTENT_HANDLERS.get(intent, default_module.document_qa)
+    # Map each intent to its Task.callback
+    HANDLER_FUNCS = {
+        "admission": admission_task.callback,
+        "program":   program_task.callback,
+        "faculties": faculty_task.callback,
+        "member":    board_task.callback,
+        "student":   student_task.callback,
+        "campus":    campus_task.callback,
+    }
+    # Fallback to the default_task callback
+    handler = HANDLER_FUNCS.get(intent, default_task.callback)
+
     try:
-        return handler(user_query)
+        # wrap the raw string in an object with an .input attribute
+        class Q: 
+            def __init__(self, i): self.input = i
+
+        result = handler(Q(user_query))
+
+        # if the specialist handler apologizes or returns nothing, delegate to default
+        if not result or result.lower().startswith("sorry"):
+            return default_task.callback(Q(user_query))
+
+        return result
+
     except Exception:
-        return "Sorry, I couldn't process that right now."
+        return default_task.callback(Q(user_query))
+# ─── 8) OPTIONAL CLI CONCURRENCY WRAPPER ──────────────────────────────────
+process_pool = ProcessPoolExecutor(max_workers=4)
+thread_pool  = ThreadPoolExecutor(max_workers=20)
+
+def query_in_process(q: str) -> str:
+    return process_pool.submit(handle_query, q).result()
 
 if __name__ == "__main__":
     print("DSEU Unified Assistant (type 'exit' or 'quit' to stop')")
+    runner = query_in_process
+
     for line in sys.stdin:
         q = line.strip()
         if q.lower() in ("exit", "quit"):
             break
-        print("\n🤖", handle_query(q), "\n")
+        print(f"\n🤖 {runner(q)}\n")
